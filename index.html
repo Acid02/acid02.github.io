@@ -1,102 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>彩虹动画</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="记录沙小光成长的点点滴滴。">
 		<meta name="keywords" content="沙小光,1716815045,Acid02">
 		<meta name="author" content="沙小光,1716815045@qq.com" /> 
 		<meta name="robots" content="index" /> <!-- 搜索引擎抓取 -->
 		<meta name="viewport" content="width=device-width,viewport-fit=cover,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<style>
-.ch{width:800px;margin:0 auto;}
-.ch div {
-  color: hsl(var(--h, 343), var(--s, 100%), var(--l, 50%));
-  border: var(--rad) solid currentColor;
-  border-radius: 50%;
-  --rad: 4vmin;
-  --dim: 100vmin;
-  width: calc(var(--dim) - var(--rad) * var(--i) * 2.5);
-  height: calc(var(--dim) - var(--rad) * var(--i) * 2.5);
-
-  display: flex;
-  margin: auto;
-
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 49%, 0% 49%);
-  min-height: 100vh;
-  display: flex;
-  background: #16161c;
-  transform: translateY(25vmin);
-}
-html {
-  overflow: hidden;
-}
-</style>
-</head>
-<body>
-<span style='color:#fff'>测试：</span>
-<div class="ch">
-
-	<div style="--i: 1; --h: 343">
-	  <div style="--i: 2; --h: 43">
-		<div style="--i: 3; --h: 64">
-		  <div style="--i: 4; --h: 143">
-			<div style="--i: 5; --h: 203">
-			  <div style="--i: 6; --h: 263">
-				<div style="--i: 7; --h: 293"></div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			iframe{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+		<link rel="icon" href="favicon.ico">
+		<title>沙小光的成长笔记</title>
+	</head>
 	
-</div>
-
-<script>
-const bands = document.querySelectorAll("div");
-const duration = 5000;
-
-bands[0].animate(
-  {
-    transform: [`rotate(-135deg)`, `rotate(225deg)`]
-  },
-  {
-    id: "primary",
-    duration,
-    iterations: Infinity,
-    direction: "normal",
-    easing: "ease-in-out"
-  }
-);
-
-for (let i = 1, l = bands.length; i < l; ++i) {
-  bands[i].animate(
-    {
-      transform: [`rotate(0deg)`, `rotate(8deg)`, `rotate(0deg)`]
-    },
-    {
-      id: `subtle-offset${i}`,
-      duration,
-      iterations: Infinity,
-      direction: "normal",
-      easing: "ease-in-out"
-    }
-  );
-}
-</script>
-
-</body>
+	<body style="margin: 0;padding: 0;">
+		<iframe src="http://49.234.69.185/"  height="100%" width="100%" id="frame_full" frameborder="0" scrolling="auto"></iframe>
+	</body>
 </html>
